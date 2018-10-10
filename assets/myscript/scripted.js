@@ -1,8 +1,11 @@
 window.onload = init;
 
     function init(){
+
+        const baseHref = (document.getElementsByTagName('base')[0] || {}).href;
+
         var cap = new CircleAudioPlayer({
-            audio: '/assets/audio/finesse.mp3',
+        audio: baseHref + 'assets/audio/finesse.mp3',
         size: 120,
         borderWidth: 8
         });
